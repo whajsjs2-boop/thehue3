@@ -16,14 +16,14 @@ const courseData = {
         { title: "Premium Healing Care", time: "120분", price: "140,000₩", desc: "최상의 만족을 선사하는 VIP 힐링" }
     ],
     vip: [
-        { title: "VIP 스포츠마사지 + 오일", time: "90분", price: "120,000₩", desc: "스포츠마사지와 오일을 함께 구성한 조합 코스" },
-        { title: "VIP 스포츠마사지 + 감성힐링", time: "90분", price: "140,000₩", desc: "스포츠마사지와 감성힐링을 함께 구성한 조합 코스" },
-        { title: "VIP 스포츠마사지 + 감성힐링 + 발", time: "90분", price: "160,000₩", desc: "스포츠마사지, 감성힐링, 발 관리를 함께 구성한 조합 코스" },
-        { title: "VIP 스포츠마사지 + 오일", time: "120분", price: "140,000₩", desc: "여유 있게 진행하는 스포츠마사지와 오일 조합 코스" },
-        { title: "VIP 스포츠마사지 + 감성힐링", time: "120분", price: "160,000₩", desc: "여유 있게 진행하는 스포츠마사지와 감성힐링 조합 코스" },
-        { title: "VIP 스포츠마사지 + 감성힐링 + 발", time: "120분", price: "180,000₩", desc: "여유 있게 진행하는 스포츠마사지, 감성힐링, 발 조합 코스" },
-        { title: "프리미엄 VVIP 스포츠마사지 + 오일 + 발", time: "150분", price: "200,000₩", desc: "스포츠마사지, 오일, 발 관리를 함께 구성한 프리미엄 코스" },
-        { title: "프리미엄 VVIP 스포츠마사지 + 감성힐링 + 발", time: "150분", price: "220,000₩", desc: "스포츠마사지, 감성힐링, 발 관리를 함께 구성한 프리미엄 코스" }
+        { title: "스페셜", time: "60분", price: "110,000₩" },
+        { title: "스페셜", time: "90분", price: "130,000₩" },
+        { title: "스페셜", time: "120분", price: "150,000₩" },
+        { title: "VIP", time: "60분", price: "120,000₩" },
+        { title: "VIP", time: "90분", price: "140,000₩" },
+        { title: "VIP", time: "120분", price: "160,000₩" },
+        { title: "VVIP A코스", time: "150분", price: "200,000₩" },
+        { title: "VVIP B코스", time: "150분", price: "220,000₩" }
     ]
 };
 
@@ -64,7 +64,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     <div class="flex justify-between items-center p-6 rounded-2xl bg-gray-50 hover:bg-yellow-50 transition-colors cursor-pointer group">
                         <div class="text-left">
                             <h4 class="font-bold text-lg group-hover:text-yellow-700">${item.title}</h4>
-                            <p class="text-sm text-gray-500">${item.desc} (${item.time})</p>
+                            <p class="text-sm text-gray-500">${item.desc ? `${item.desc} (${item.time})` : item.time}</p>
                         </div>
                         <span class="font-bold text-xl">${item.price}</span>
                     </div>
